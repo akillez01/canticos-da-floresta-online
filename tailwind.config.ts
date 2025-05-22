@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,60 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Cores temáticas do Cânticos da Floresta
+				forest: {
+					50: '#f2f8f3',
+					100: '#e0eee3',
+					200: '#c4dfcc',
+					300: '#9cc7a9',
+					400: '#6ea983',
+					500: '#4c8c66',
+					600: '#3b7152',
+					700: '#325c45',
+					800: '#2c4a3a',
+					900: '#253d32',
+					950: '#122119',
+				},
+				earth: {
+					50: '#faf5f0',
+					100: '#f0e6d8',
+					200: '#e0ccb4',
+					300: '#d0b08a',
+					400: '#c1956a',
+					500: '#b07b4f',
+					600: '#9c6443',
+					700: '#82513a',
+					800: '#6c4334',
+					900: '#5c3a2f',
+					950: '#321c16',
+				},
+				spirit: {
+					50: '#f5f7fe',
+					100: '#ebeefe',
+					200: '#d8dffc',
+					300: '#b9c4f8',
+					400: '#94a1f3',
+					500: '#757eec',
+					600: '#5b5cdf',
+					700: '#4c49cb',
+					800: '#403ea6',
+					900: '#373885',
+					950: '#232153',
+				},
+				gold: {
+					50: '#fefbe8',
+					100: '#fff8c2',
+					200: '#ffee88',
+					300: '#ffdf49',
+					400: '#ffcf1b',
+					500: '#faba04',
+					600: '#e19500',
+					700: '#bb7102',
+					800: '#985608',
+					900: '#7c470c',
+					950: '#482400',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +138,57 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-out': {
+					'0%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					},
+					'100%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					}
+				},
+				'leaf-sway': {
+					'0%, 100%': {
+						transform: 'rotate(-3deg)'
+					},
+					'50%': {
+						transform: 'rotate(3deg)'
+					}
+				},
+				'water-ripple': {
+					'0%': {
+						transform: 'scale(0)',
+						opacity: '1',
+					},
+					'100%': {
+						transform: 'scale(4)',
+						opacity: '0',
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'fade-out': 'fade-out 0.6s ease-out',
+				'leaf-sway': 'leaf-sway 4s ease-in-out infinite',
+				'water-ripple': 'water-ripple 2s linear infinite',
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'forest-texture': "url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" opacity=\"0.05\"><path d=\"M20 20C40 20 40 80 60 80C80 80 80 20 100 20\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/></svg>')",
 			}
 		}
 	},
