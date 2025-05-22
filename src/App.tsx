@@ -10,6 +10,8 @@ import Agenda from "./pages/Agenda";
 import Colabore from "./pages/Colabore";
 import Contato from "./pages/Contato";
 import Sobre from "./pages/Sobre";
+import Acessibilidade from "./pages/Acessibilidade";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +29,8 @@ const App = () => (
           <Route path="/colabore" element={<Colabore />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/sobre" element={<Sobre />} />
+          <Route path="/acessibilidade" element={<Acessibilidade />} />
+          <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

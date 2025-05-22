@@ -129,7 +129,11 @@ const Agenda = () => {
                     </div>
                   </CardContent>
                   <CardFooter className="pt-0">
-                    <Button as="a" href={evento.link} className="w-full bg-forest-600 hover:bg-forest-700 dark:bg-forest-700 dark:hover:bg-forest-600">
+                    <Button 
+                      href={evento.link} 
+                      className="w-full bg-forest-600 hover:bg-forest-700 dark:bg-forest-700 dark:hover:bg-forest-600"
+                      onClick={() => window.open(evento.link, '_blank')}
+                    >
                       {evento.tipo === 'online' ? 'Inscrever-se' : 'Reservar Vaga'}
                     </Button>
                   </CardFooter>
@@ -146,7 +150,11 @@ const Agenda = () => {
                     Entre em contato conosco para sugerir novos eventos, colaborações ou participar do projeto.
                   </p>
                 </div>
-                <Button variant="outline" className="border-white/30 bg-white/10 text-white backdrop-blur-sm transition-all hover:bg-white/20">
+                <Button 
+                  variant="outline" 
+                  className="border-white/30 bg-white/10 text-white backdrop-blur-sm transition-all hover:bg-white/20"
+                  onClick={() => window.location.href = "/contato"}
+                >
                   Entrar em contato
                 </Button>
               </div>
