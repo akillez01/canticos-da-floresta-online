@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -130,7 +129,6 @@ const Agenda = () => {
                   </CardContent>
                   <CardFooter className="pt-0">
                     <Button 
-                      href={evento.link} 
                       className="w-full bg-forest-600 hover:bg-forest-700 dark:bg-forest-700 dark:hover:bg-forest-600"
                       onClick={() => window.open(evento.link, '_blank')}
                     >
