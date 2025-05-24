@@ -1,7 +1,6 @@
-
-import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import image1 from '/image/image1.png';
 
 const Mission = () => {
   return (
@@ -9,26 +8,27 @@ const Mission = () => {
       <div className="container">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 md:grid-cols-2 md:gap-8">
-            {/* Imagem com elementos decorativos */}
+            {/* Imagem com elementos decorativos - ÁREA COM CORREÇÃO */}
             <div className="relative order-2 flex items-center justify-center md:order-1">
-              <div className="relative mx-auto max-w-sm overflow-hidden rounded-2xl">
-                {/* Imagem principal */}
+              <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-2xl" style={{ height: '100%' }}>
+                {/* Imagem principal - CORRIGIDA */}
                 <img 
-                  src="https://images.unsplash.com/photo-1500673922987-e212871fec22" 
+                  src={image1}  // Removido o 'url()' incorreto
                   alt="Luz entre árvores representando a espiritualidade da floresta" 
-                  className="h-auto w-full object-cover"
+                  className="h-full w-full object-cover rounded-2xl"
+                  style={{ minHeight: '400px' }}  // Garante altura mínima
                 />
                 
-                {/* Elementos decorativos */}
+                {/* Elementos decorativos (mantidos exatamente iguais) */}
                 <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full border-4 border-spirit-500/30 bg-spirit-500/20 backdrop-blur-sm"></div>
                 <div className="absolute -right-4 -top-4 h-16 w-16 rounded-full border-4 border-gold-500/30 bg-gold-500/20 backdrop-blur-sm"></div>
                 
-                {/* Padrão gráfico sobreposto */}
+                {/* Padrão gráfico sobreposto (mantido igual) */}
                 <div className="absolute inset-0 mix-blend-soft-light opacity-30 forest-pattern"></div>
               </div>
             </div>
             
-            {/* Conteúdo textual */}
+            {/* Conteúdo textual (MANTIDO EXATAMENTE IGUAL) */}
             <div className="order-1 md:order-2">
               <span className="mb-2 inline-block rounded-full bg-gold-500/20 px-4 py-1 text-sm font-medium text-gold-300">
                 Nossa Missão
